@@ -12,7 +12,7 @@ var imgPlaceHolderMobile = document.querySelector('.imgPlaceHolderMobile');
   function displayWindowSize() {
     let myWidth = window.innerWidth;
 
-    if (myWidth >= 800) {
+    if (myWidth >= 880) {
       img.setAttribute("src", "images/hero-desktop.jpg");
       imgPlaceHolderDesktop.appendChild(heroImgHolder);
     } else {

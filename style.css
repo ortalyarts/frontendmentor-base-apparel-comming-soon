@@ -56,6 +56,9 @@ main {
 .left {
   background: var(--gradient1);
 }
+.left-inner {
+  max-width:23.438rem;
+}
 .logo {
   max-width:6.25rem; 
   margin:2rem 0 2rem 2rem;
@@ -64,6 +67,7 @@ main {
   max-width:100%;
 }
 .text-holder {
+  max-width:100%;
   padding:0 2rem 5.75rem 2rem;
 }
 h1 {
@@ -156,7 +160,8 @@ input[type="email"]:focus {
 footer { font-size: 11px; text-align: center; color: var(--color3); }
 footer a { color: var(--color1); }
 
-@media screen and (min-width:50rem) {
+
+@media screen and (min-width:55rem) {
   body {
     padding:0;
   }
@@ -166,22 +171,33 @@ footer a { color: var(--color1); }
     background: var(--gradient1);
   }
   .left {
-    padding: 4.125rem 14rem 4.125rem 10.375rem;
     background: url("../images/bg-pattern-desktop.svg") no-repeat center;
+    max-width:100%;
   }
+.left-inner {
+  margin: 4.25rem auto 0 auto;
+  max-width:27.5rem;
+}
   .logo {
     max-width:10rem; 
     margin:0;
   }
+
+  .imgPlaceHolderDesktop {
+    overflow: hidden;
+  }
   .hero-image-holder {
     text-align:right;
+    overflow: hidden;
   }
-  .hero-image-holder img, .hero-image-holder picture{
-    max-width:100%;
+  
+  .hero-image-holder img, .hero-image-holder picture {
+    height:100%;
+    object-fit: cover;
   }
+
   .text-holder {
     padding:0;
-    margin-top: 8.5rem;
   }
   main p {
     text-align:left;
@@ -192,7 +208,7 @@ footer a { color: var(--color1); }
     text-align:left;
     font-size:4rem;
     line-height:4.3rem;
-    margin:3rem 0 1.4rem 0;
+    margin:8.313rem 0 1.4rem 0;
   }
   .input-holder {
     margin-top:2.7rem;
@@ -208,5 +224,10 @@ footer a { color: var(--color1); }
   }
   .input-holder-invalid { 
     background-position: right 7.5rem center;
+  }
+}
+@media screen and (max-width:90rem) {
+  body {
+    padding: 0 1rem;
   }
 }
